@@ -1,4 +1,4 @@
------- Problem 22 -----------
+------ Problem 23 -----------
 ----- Customers Using Multiple Product Categories ------
 
 ----Find customers who:
