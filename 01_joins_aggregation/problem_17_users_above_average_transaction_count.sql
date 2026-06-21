@@ -53,3 +53,4 @@ having count(t.transaction_id) > (
         select avg(transaction_id)
         from Transactions)
 order by transaction_count desc, u.user_id asc
+
