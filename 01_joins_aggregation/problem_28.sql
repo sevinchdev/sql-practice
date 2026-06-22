@@ -47,12 +47,12 @@ INSERT INTO Sales VALUES
 
 select p.product_id, p.product_name,
         count(s.sale_id) as sale_count,
-        sum(quantity) as total_quantity
+        sum(s.quantity) as total_quantity
 from Products p
 join Sales s
-on p.product_id = s.sale_id
+on p.product_id = s.product_id
 group by p.product_id, p.product_name
-having sum(quantity) >(
+having sum(s.quantity) >(
               select avg(total_quantity_per_product)
               from (
                     select product_id,
