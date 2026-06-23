@@ -50,6 +50,6 @@ left join Orders o
 on c.customer_id = o.customer_id
 group by c.customer_id, c.customer_name
 having sum(o.amount) >= 1000 and 
-        sum(case when o.category = 'Books' then o.amount else 0 end) > 
+        sum(case when o.category = 'Books' then o.amount else 0 end) >= 
         sum(case when o.category = 'Electronics' then o.amount else 0 end) 
 order by total_revenue desc, customer_id
